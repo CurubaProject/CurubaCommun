@@ -1,0 +1,17 @@
+{
+   "name": "commum",
+   "description": "commum of DomumServus",
+   "version": "0.0.1",
+   "private": true,
+   "dependencies" : {
+      "validator" : "0.4.x"
+   }, 
+   "devDependencies": {
+      "mocha": "*",
+      "should": "*",
+      "growl" : "1.7.x"
+   },
+   "engines": { 
+      "node": ">=0.8.0" 
+   }
+}
