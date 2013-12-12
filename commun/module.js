@@ -80,7 +80,19 @@ var payload = {
                      .word32('module_id')
                      .word32('module_type')
                      .vars;
-    }
+    },
+	payload80 : function (buffer) {
+		return buffer.word8('payload')
+					.word8('mac_nic_1')
+					.word8('mac_nic_2')
+					.word8('mac_nic_3')
+					.word8('type')
+					.word8('deviceNumber')
+					.word8('status')
+					.word8('state')
+					.word8('analogicRead')
+					.vars;
+	}
 };
 
 exports.payload = payload;

@@ -86,14 +86,19 @@ var SetDeviceName = {
 var SetDeviceState = {
 	route : ClientRoutes.SETDEVICESTATE,
 	validators : {
-      DeviceId : {
-         checking : function (param, value, that) {
-            that.check(value, {name : param, code : 'RANGE'}).len(5, 6);
+        DeviceId : {
+			checking : function (param, value, that) {
+            that.check(value, {name : param, code : 'RANGE'}).len(0, 15);
             that.check(value, {name : param, code : 'UNDEFINED'}).notEmpty();
 
 				return value;
-         }
-      },
+			}
+        },
+		DeviceNumber : {
+			checking : function (param, value, that) {
+				return value;
+			}
+		},
 		Parameters : {
          checking : function (param, value, that) {
             that.check(value, {name : param, code : 'UNDEFINED'}).notEmpty();
