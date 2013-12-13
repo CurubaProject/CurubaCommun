@@ -102,7 +102,7 @@ var SetDeviceState = {
 		Parameters : {
          checking : function (param, value, that) {
             that.check(value, {name : param, code : 'UNDEFINED'}).notEmpty();
-	
+
 				if (that.getErrors() && that.getErrors().length === 0) {
 					var decoded = JSON.parse(value);
 

@@ -81,6 +81,10 @@ var payload = {
                      .word32('module_type')
                      .vars;
     },
+	payload70 : function (buffer) {
+		var payloadID = 0x46;
+		return new Buffer([payloadID]);
+	},
 	payload80 : function (buffer) {
 		return buffer.word8('payload')
 					.word8('mac_nic_1')
