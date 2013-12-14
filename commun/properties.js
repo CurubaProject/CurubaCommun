@@ -133,6 +133,11 @@ var DeviceStatistics = {
 				return value;
          }
 		},
+		Date : {
+			checking : function (param, value, that) {
+				return value;
+			}
+		},
 		Granularity : {
          checking : function (param, value, that) {
             that.check(value, {name : param, code : 'RANGE'}).len(1, 8);
